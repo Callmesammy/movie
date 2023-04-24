@@ -5,7 +5,7 @@ import Navbar from '../Navbar/Navbar'
 function Layout({children}) {
   return (
     <>
-    <div className="bg-maint text-white">
+    <div className="bg-maint  text-white">
     <Navbar/>
     {children}
     <Footer/>
