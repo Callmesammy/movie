@@ -1,6 +1,7 @@
+
 export const Movies = [
     {
-        name: 'Army of The Dead',
+        name: ' Verkings',
         desc: 'Lorem ipsum blah blah blah',
         titleImage: '1.jpg', 
         image: '11.jpg',
@@ -86,8 +87,8 @@ export const Movies = [
     {
         name: 'Star Girl',
         desc: 'Lorem ipsum blah blah blah',
-        titleImage: '1.jpg', 
-        image: '11.jpg',
+        titleImage: '7.jpg', 
+        image: '7.jpg',
         category: 'Fantasy',
         language: 'German',
         year: '2023',
@@ -113,4 +114,4 @@ export const Movies = [
 
     
     
-]
+];
