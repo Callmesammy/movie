@@ -8,6 +8,9 @@ body, html{
     font-weight: 400;
 }
 
+.linear-bg{
+    background: linear-gradient(269.82deg, #07091c00 0.17%, #080a1ad6 99.87%);
+}
 input:focus,textarea:focus,select:focus{
     outline: none !important;
     box-shadow: none !important;
