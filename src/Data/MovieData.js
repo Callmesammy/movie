@@ -1,7 +1,7 @@
 
 export const Movies = [
     {
-        name: ' Verkings',
+        name: ' WAKANDA',
         desc: 'Lorem ipsum blah blah blah',
         titleImage: '11.jpg', 
         image: '1.jpg',
@@ -15,7 +15,7 @@ export const Movies = [
     }, 
 
     {
-        name: ' Sailor god',
+        name: ' PUSS',
         desc: 'Lorem ipsum blah blah blah',
         titleImage: '22.jpg', 
         image: '2.jpg',
@@ -29,7 +29,7 @@ export const Movies = [
     },
 
     {
-        name: 'Sing 2',
+        name: 'SING 2',
         desc: 'Lorem ipsum blah blah blah',
         titleImage: '33.jpg', 
         image: '3.jpg',
@@ -43,7 +43,7 @@ export const Movies = [
     },
 
     {
-        name: 'RIO',
+        name: 'AVENGERS INFINITY WARS',
         desc: 'Lorem ipsum blah blah blah',
         titleImage: '44.jpg', 
         image: '4.jpg',
@@ -57,7 +57,7 @@ export const Movies = [
     },
 
     {
-        name: 'Puss',
+        name: 'ICE AGE',
         desc: 'Lorem ipsum blah blah blah',
         titleImage: '55.jpg', 
         image: '5.jpg',
@@ -71,7 +71,7 @@ export const Movies = [
     },
 
     {
-        name: 'Sing 1',
+        name: 'MOANA',
         desc: 'Lorem ipsum blah blah blah',
         titleImage: '66.jpg', 
         image: '6.jpg',

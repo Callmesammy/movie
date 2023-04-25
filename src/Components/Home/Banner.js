@@ -3,6 +3,7 @@ import { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide} from 'swiper/react';
 import { Movies } from './../../Data/MovieData';
 import FlexMovieItem from '../FlexMovieItem';
+import { Link } from 'react-router-dom';
 
 function Banner() {
   return (
@@ -20,15 +21,21 @@ function Banner() {
          { Movies.slice(0,6).map((movie, index) => (
     <SwiperSlide key={index} className="relative rounded overflow-hidden">
       <img src={movie.image}
-      alt={movie.title} className="w-full h-full object-cover" />
-      <div className=" absolute  liner-bg xl:pl-52 sm:pl-32 pl-8 top-0 right-0 flex flex-col justify-center lg:gap-8 md:gap-5 gap-4">
-          <h1 className="xl:text-4xl truncate capitalize font-sans sm:text-2xl text-xl font-bold">
-              {movie.name}
-          </h1>
-          <div className="flex gap-5 items-center text-dyd">
+      alt={movie.name} 
+      className="w-full h-full  object-cover" />
+      <div className="absolute linar-bg xl:pl-52 sm:pl-32 pl-8 top-0 right-0 left-0 bottom-0 flex flex-col justify-center lg:gap-8 md:gap-5 gap-4">
+      <h1 className="xl:text-4xl truncate capitalize font-sans sm:text-2xl text-xl font-bold">
+        {movie.name}
+      </h1>
+          <div className=" flex gap-5 items-center text-dyd">
             <FlexMovieItem movie={movie}/>
-      </div>
-      </div>
+          </div>
+          <div className=" flex gap-5 items-center">
+            <Link to={movie.name} className="bg-sub hover:text-maint transitions text-white px-8 py-3 rounded font-medium sm:text-sm text-xs">
+            WATCH
+            </Link>
+          </div>
+      </div>      
        </SwiperSlide>
        ))
        }
