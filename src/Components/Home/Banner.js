@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide} from 'swiper/react';
 import { Movies } from './../../Data/MovieData';
 import FlexMovieItem from '../FlexMovieItem';
 import { Link } from 'react-router-dom';
+import { FaHeart } from 'react-icons/fa';
 
 function Banner() {
   return (
@@ -34,6 +35,9 @@ function Banner() {
             <Link to={movie.name} className="bg-sub hover:text-maint transitions text-white px-8 py-3 rounded font-medium sm:text-sm text-xs">
             WATCH
             </Link>
+            <button className="bg-white hover:text-sub transitions text-white px-8 py-3 rounded text-sm bg-opacity-30">
+              <FaHeart/>
+            </button>
           </div>
       </div>      
        </SwiperSlide>
