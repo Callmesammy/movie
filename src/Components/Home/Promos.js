@@ -9,11 +9,11 @@ function Promos() {
         <h1 className=" xl:text-3xl text-xl capitalize font-sans font-medium xl:leading-relaxed">
           Download Your Movies  and watch them offline <br/> Enjoy on your mobile device
         </h1>
-        <p className="text-txt text-sm xl:text-base leading-6 xl:leading-8">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <p className="text-txt text-sm xl:text-base leading-6 xl:leading-8 text-justify">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type 
+          specimen book. It has survived not only five centuries, but also the leap ...
         </p>
         <div className="flex gap-4 md:text-lg text-sm">
           <div className=" flex-colo bg-black text-sub px-6 py-3 rounded font-bold">
@@ -23,6 +23,9 @@ function Promos() {
           <FiUser/> 2K
           </div>
         </div>
+      </div>
+      <div>
+      <img src="mobile.png" alt="Mobile app" className="w-full object-contain"/>
       </div>
       </div>
       </div>
