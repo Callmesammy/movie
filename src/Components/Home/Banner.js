@@ -1,10 +1,10 @@
 import React from 'react';
-import { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide} from 'swiper/react';
 import { Movies } from './../../Data/MovieData';
 import FlexMovieItem from '../FlexMovieItem';
 import { Link } from 'react-router-dom';
 import { FaHeart } from 'react-icons/fa';
+import { Autoplay } from 'swiper';
 
 function Banner() {
   return (
@@ -19,15 +19,15 @@ function Banner() {
         autoplay={{ delay: 4000, disableOnInteraction: false}}
         className=" w-full xl:h-96 bg-dyr lg:h-64 h-48">      
          { Movies.slice(0,6).map((movie, index) => (
-    <SwiperSlide key={index} className="relative rounded overflow-hidden">
+        <SwiperSlide key={index} className="relative rounded overflow-hidden">
       <img src={movie.image}
       alt={movie.name} 
-      className="w-full h-full  object-cover" />
-      <div className="absolute linar-bg xl:pl-52 sm:pl-32 pl-8 top-0 right-0 left-0 bottom-0 flex flex-col justify-center lg:gap-8 md:gap-5 gap-4">
+      className="w-full h-full object-cover" />
+      <div className="absolute linear-bg xl:pl-52 sm:pl-32 pl-8 top-0 right-0 left-0 bottom-0 flex flex-col justify-center lg:gap-8 md:gap-5 gap-4">
       <h1 className="xl:text-4xl truncate capitalize font-sans sm:text-2xl text-xl font-bold">
         {movie.name}
       </h1>
-          <div className=" flex gap-5 items-center text-dyd">
+          <div className="flex gap-5 items-center text-dyd">
             <FlexMovieItem movie={movie}/>
           </div>
           <div className=" flex gap-5 items-center">
@@ -40,8 +40,7 @@ function Banner() {
           </div>
       </div>      
        </SwiperSlide>
-       ))
-       }
+       ))}
          </Swiper>
     </div>
   );

@@ -29,7 +29,7 @@ function Promos() {
       </div>
       </div>
       </div>
-  )
+  );
 }
 
 export default Promos

@@ -5,7 +5,8 @@ import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa'
 
 
 
-function Stars ({value}) {
+
+function Rating ({value}) {
   return (
     <>
   
@@ -74,4 +75,4 @@ function Stars ({value}) {
     )
 }
 
-export default Stars
+export default Rating

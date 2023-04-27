@@ -10,7 +10,7 @@ function Navbar() {
     
     return (
     <>
-    <div className=" bg-maint  shadow-md sticky top-0 z-0">
+    <div className=" bg-maint shadow-md sticky top-0 z-20">
         <div className="container mx-auto lg:grid gap-10 grid-cols-7 justify-between items-center py-2 px-4">
         <div className=" my-5 col-span-1 lg:block hidden"> 
         <Link to="/">
@@ -24,9 +24,7 @@ function Navbar() {
                     <FaSearch/>
                 </button>
                 <input type="text" placeholder="Search Movie Name from here"
-                className=" font-medium placeholder:text-brd text-sm w-11/12 h-12 bg-transparent border-none px-2 text-black">
-                    
-                </input>
+                className=" font-medium placeholder:text-brd text-sm w-11/12 h-12 bg-transparent border-none px-2 text-black"/>
             </form>
         </div>
         {/* {Menus} */}
@@ -43,9 +41,9 @@ function Navbar() {
             <NavLink to="/login" className={Hover}>
             <CgUser className="w-8 h-8"/>
             </NavLink>
-            <NavLink to="/favorite" className={'${Hover} relative'}>
+            <NavLink to="/favorite" className={'{Hover} relative'}>
             <FaHeart className= "w-6 h-6"/>
-            <div className=" w-5 h-5 flex-colo rounded-full text-xs bg-sub text-white absolute -top-5 right-1">
+            <div className="w-5 h-5 flex-colo rounded-full text-xs bg-sub text-white absolute -top-5 -right-1">
                     3        </div>
             </NavLink>
         </div>
@@ -53,8 +51,8 @@ function Navbar() {
            </div> 
            
         </div>
-    </>
-  )
+   
+  </> );
 }
 
 export default Navbar

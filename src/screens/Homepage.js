@@ -8,16 +8,17 @@ import TopRated from '../Components/Home/TopRated';
 
 function Homepage() {
   return (
-    <>
-    <Layout>
-    <div className=" container mx-auto min-h-screen px-2">
+ 
+     <Layout> 
+    <div className="container mx-auto min-h-screen px-2 mb-6"> 
         <Banner/>
         <PopularMovies/>
         <Promos/>
-        <TopRated/>
+        <TopRated/> 
+     
     </div>
     </Layout>
-    </> );
+   );
 }
 
 export default Homepage

@@ -17,7 +17,7 @@ function FlexMovieItem({movie}) {
         <span className=" text-sm font-medium"> {movie.time}</span>
       </div>
     </>
-  )
+  );
 }
 
 export default FlexMovieItem
