@@ -59,7 +59,7 @@ return (
           <button className={classNames} ref={(node) => setprevE1(node)}>
             <BsCaretLeftFill/>
             </button>
-          <button className={classNames} ref={(node) => setprevE1(node)}>
+          <button className={classNames} ref={(node)=> setnextE1(node)}>
             <BsCaretRightFill/>
             </button>
           </div>

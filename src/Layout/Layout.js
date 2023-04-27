@@ -6,10 +6,9 @@ function Layout({children}) {
   return (
     <>
     <div className="bg-maint  text-white">
-    <Navbar/>
-    {children}
-    <Footer/>
-    </div>
+    <Navbar/> {children} <Footer/>
+    
+    </div> 
     </>
   );
 }

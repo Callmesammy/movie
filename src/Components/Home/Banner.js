@@ -18,7 +18,6 @@ function Banner() {
         modules={[Autoplay]}
         autoplay={{ delay: 4000, disableOnInteraction: false}}
         className=" w-full xl:h-96 bg-dyr lg:h-64 h-48">      
-         
          { Movies.slice(0,6).map((movie, index) => (
     <SwiperSlide key={index} className="relative rounded overflow-hidden">
       <img src={movie.image}
@@ -43,7 +42,6 @@ function Banner() {
        </SwiperSlide>
        ))
        }
-
          </Swiper>
     </div>
   );

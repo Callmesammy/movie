@@ -8,6 +8,7 @@ import TopRated from '../Components/Home/TopRated';
 
 function Homepage() {
   return (
+    <>
     <Layout>
     <div className=" container mx-auto min-h-screen px-2">
         <Banner/>
@@ -16,7 +17,7 @@ function Homepage() {
         <TopRated/>
     </div>
     </Layout>
-  );
+    </> );
 }
 
 export default Homepage
