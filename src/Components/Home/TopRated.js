@@ -5,7 +5,6 @@ import { BsBookmarkStarFill, BsCaretLeftFill, BsCaretRightFill } from 'react-ico
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {Autoplay, Navigation } from 'swiper';
 import { Movies } from './../../Data/MovieData';
-
 import { FaHeart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Rating from './Stars';
@@ -21,13 +20,13 @@ return (
 <div className="my-16">
       <Title title = "Top Rated " Icon = {BsBookmarkStarFill}/>
       <div className="mt-10">
-      <Swiper navigation={{nextE1, prevE1}} 
+      <Swiper 
+        navigation = {{nextE1, prevE1}}
         slidesPerView={4}
-         spaceBetween={40} 
+        spaceBetween={40} 
         autoplay={true} 
         speed={1000} 
         loop={true}
-
         modules={[Navigation, Autoplay]}>
           {
             Movies.map((movie, index) => (
