@@ -12,8 +12,8 @@ import Rating from './Stars';
 
 function TopRated() {
 
-  const [nextE1, setNextE1] = useState(null);
-  const [prevE1, setPrevE1] = useState(null);
+  const [nextE, setNextE1] = useState(null);
+  const [prevE, setPrevE1] = useState(null);
 
   const clasName = 
   'hover:bg-dyr transitions bg-maint rounded w-8 h-8 flex-colo text-sm bg-sub text-white';
@@ -22,7 +22,7 @@ return (
       <Title title = "Top Rated " Icon = {BsBookmarkStarFill}/>
       <div className="mt-10">
       <Swiper
-         navigation = {{nextE1, prevE1}}
+         navigation = {{nextE, prevE}}
         slidesPerView={4}
         spaceBetween={40} 
         autoplay={true} 
@@ -50,14 +50,7 @@ return (
                 </div> </SwiperSlide>
          )) }
         </Swiper>
-         <div className="w-full px-1 flex-rows gap-6 pt-12">
-          <button className = {clasName} ref={(node) => setPrevE1(node)}>
-            <BsCaretLeftFill/>
-            </button>
-          <button className = {clasName} ref={(node) => setNextE1(node)}>
-            <BsCaretRightFill/>
-            </button>
-          </div>
+        
       </div>   
 </div>
     );
