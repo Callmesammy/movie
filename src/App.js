@@ -4,6 +4,7 @@ import Homepage from './screens/Homepage';
 import Aboutus from './screens/Aboutus';
 import NotFound from './screens/NotFound';
 import Contactus from './screens/Contactus';
+import Movies from './screens/Movies';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Route path="/" element={<Homepage />} />
       <Route path="/about-us" element={<Aboutus />} />
       <Route path="/contact-us" element={<Contactus />} />
+      <Route path="/movies" element={<Movies />} />
       <Route path="*" element={<NotFound />} />
    </Routes>
   );
