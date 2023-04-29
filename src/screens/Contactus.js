@@ -43,6 +43,11 @@ function Contactus() {
         <span className="flex-colo w-20 h-20 mt-4 rounded-full bg-maint text-sub text-2xl">
             <item.icon />
         </span>
+        <h5 className="text-xl font-semibold mt-6 mb-2">{item.title}</h5>
+        <p className="text-txt leading-7 mb-0 text-sm">
+        <a href={`mailto:${item.contact}` } className=" text-blue-500 px-2 mb-0 underline font-bold tracking-wider">{item.contact}</a>
+        {item.info}
+        </p>
         </div>
  ))
         }
