@@ -1,7 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 import { categoriesData } from './../Data/CategoriesData';
-import { Listbox } from '@headlessui/react';
+import { Listbox, Transition} from '@headlessui/react';
+import { Fragment } from 'react';
+import { FaChevronDown} from 'react-icons/fa';
+import { MdKeyboardArrowDown } from 'react-icons/md';
 
 
 const YearData = [
@@ -15,7 +18,7 @@ const YearData = [
 
 ]
 
-const TimteDate =[
+const TimeDate =[
 {title: "Sort By Time"},
 {title: "1-3 Hours"},
 {title: "3-5 Hours"},
@@ -36,55 +39,88 @@ const RateDate =[
 ]
 
 function Filter() {
-const [category, setCategory] = useState({title: "Category"});
-const [year, setYear] = useState(YearData[0]);
-const [time, setTime] = useState(TimteDate[0]);
-const [rate, setRate] = useState(RateDate[0]);
+const [Category, setCategory] = useState({title: 'Category'});
+const [Year, setYear] = useState(YearData[0]);
+const [Time, setTime] = useState(TimeDate[0]);
+const [Rate, setRate] = useState(RateDate[0]);
 
 
-const Filters = [
+const Filter = [
   {
-    value: "Category",
-    onchange:setCategory,
+    value: Category,
+    onChange:setCategory,
     items:categoriesData
   },
 
   {
-    value: "year",
-    onchange:setYear,
+    value: Year,
+    onChange:setYear,
     items:YearData
   },
 
   {
-    value: "time",
-    onchange:setTime,
-    items:TimteDate
+    value: Time,
+    onChange:setTime,
+    items:TimeDate
   },
 
 {
-  value: "rate", 
+  value: Rate, 
   onChange:setRate,
   items:RateDate
 }
 ]
 
   return (
-    <div className=" my-6 bg-dyr text-dyd border-gray- grid md:grid-cols-4 grid-cols-2 lg:gap-12 gap-2 rounded p-6">
-      {Filters.map((item, index) => (
-      <Listbox key={index} value={item.value} onChange={item.onchange}>  
+    <div className="my-6 bg-dyr  border-gray-800 grid md:grid-cols-4 grid-cols-2 lg:gap-12 gap-2 rounded p-6">
+      {Filter.map((item, index) => (
+      <Listbox key={index} value={item.value} onChange={item.onChange}>  
       <div className="relative">
-      <Listbox.Button Classname= " relative border border-gray-800 w-full text-white bg-maint rounded-lg cursor-default py-4 pr-10 text-left tex-xs">
-        <span className="block truncate">{item.value.title}
-        <div className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none "
-        </span>
-      </Listbox.Button>
+      <Listbox.Button className = "relative border border-gray-800 w-full text-white bg-maint rounded-lg cursor-default py-4 pl-6 pr-10 text-xs">
+        <span className="block truncate">{item.value.title}</span>
+        <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none ">
+        <FaChevronDown className="w-5 h-5" aria-hidden="true"/>
+        </span> 
+        </Listbox.Button>
+      <Transition as={Fragment} leave="transition ease-in duration-100" leaveFrom="opacity-100" leaveTo="opacity-0">
+        <Listbox.Options className="absolute z-10 mt-1 max-h-60  w-full bg-maint rounded-md shadow-lg py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
+        {
+
+          item.items.map((iterm, i) => (
+            <Listbox.Option key={i} className={({active}) => `relative cursor-default select-none py-2 pl-10 pr-4'} cursor-default select-none relative py-2 pl-10 pr-4
+             ${active ? " bg-sub text-white" : "text-white" }` } value={iterm} >
+              {({selected}) => ( 
+                <>
+              <span className={` block truncate ${ selected ? 'font-semibold' : 'font-normal'}`}>
+                {iterm.title}
+              </span>
+              
+              {
+                selected ? (
+                  <span className="absolute inset-y-0 left-0 flex items-center pl-3"> 
+                  <MdKeyboardArrowDown className='w-5 h-5'/>
+                  </span>
+             ) :null
+                }
+                </>
+               ) }   
+            </Listbox.Option>
+        
+
+        ))}
+         </Listbox.Options> 
+      
+      </Transition>
+    
+       
       </div>
       </Listbox>
+     
       ))}
       
-      
     </div>
-  )
-}
-
+      );  
+    }
+  
+                
 export default Filter;
