@@ -3,9 +3,17 @@ import Layout from '../Layout/Layout'
 import Filter from '../Components/Filter';
 import Movie from '../Components/Movie';
 import { Movies } from './../Data/MovieData';
+import { CgSpinner } from 'react-icons/cg';
+import { useState } from 'react';
+
 
 
 function MoviePage() {
+  const maxPage =5;
+  const [page, setPage] = useState(maxPage);
+  const handlePage = () => {
+    setPage(page + maxPage);
+  };
   return (
     <Layout>
 
@@ -17,10 +25,16 @@ function MoviePage() {
     </p>
     <div className="grid sm:mt-10 mt-5 xl:grid-cols-4 2xl:grid-cols-5 lg:grid-cols-3 sm:grid-cols-2 gap-6">
       {
-        Movies?.map((movie, index) => (
-          <Movie key={index} movie={movie}/>
+        Movies.slice(0, page).map((movie, index) => (
+        <Movie key={index} movie={movie}/>
         ))
       }
+      {/* {loading Map} */}
+      <div className="w-full flex-colo md:my-20 my-10">
+        <button onClick={handlePage} className="flex-rows text-white py-3 px-6 rounded-lg font-semibold  border-2 border-sub">Load More
+        <CgSpinner className=" mx-2 animate-spin"/>
+        </button>
+      </div>
     </div>
     </div>
  </Layout> 
