@@ -1,6 +1,9 @@
 import React from 'react'
 import FlexMovieItem from './FlexMovieItem'
 import { FaShareAlt } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
+import { FaPlay } from 'react-icons/fa'
+
 
 
 
@@ -34,6 +37,16 @@ function MovieInfo({movie}) {
               <FaShareAlt />
 
             </button>
+          </div>
+          {/* languages */}
+          <div className="col-span-2 flex-colo font-medium text-sm">
+            <p>Language : {' '}<span className="ml-2 truncate">{movie?.language}</span></p>
+          </div>
+          {/* watch button */}
+          <div className="sm:col-span-2 col-span-3 flex justify-end font-medium text-sm">
+            <Link to={`/watch/${movie?.name}`} className="bg-dyr hover:bg-sub transitions border-2 border-sub rounded-full flex-rows gap-4 w-full sm:py-3">
+            <FaPlay className="w-3 h-3"/>Watch
+          </Link>
           </div>
           </div>
           </div>
