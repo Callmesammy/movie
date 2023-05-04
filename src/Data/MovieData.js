@@ -2,7 +2,7 @@
 export const Movies = [
     {
         name: ' WAKANDA',
-        desc: 'Lorem ipsum blah blah blah',
+        desc: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered a',
         titleImage: '11.jpg', 
         image: '1.jpg',
         category: 'Western',
@@ -16,7 +16,7 @@ export const Movies = [
 
     {
         name: ' PUSS',
-        desc: 'Lorem ipsum blah blah blah',
+        desc: 'middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined',
         titleImage: '22.jpg', 
         image: '2.jpg',
         category: 'Romance',
@@ -30,7 +30,7 @@ export const Movies = [
 
     {
         name: 'SING 2',
-        desc: 'Lorem ipsum blah blah blah',
+        desc: ' and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of ',
         titleImage: '33.jpg', 
         image: '3.jpg',
         category: 'Thriller',
@@ -44,7 +44,7 @@ export const Movies = [
 
     {
         name: 'AVENGERS INFINITY WARS',
-        desc: 'Lorem ipsum blah blah blah',
+        desc: ' The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
         titleImage: '44.jpg', 
         image: '4.jpg',
         category: 'Action',
@@ -58,7 +58,7 @@ export const Movies = [
 
     {
         name: 'ICE AGE',
-        desc: 'Lorem ipsum blah blah blah',
+        desc: 'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus',
         titleImage: '55.jpg', 
         image: '5.jpg',
         category: 'Adventure',
@@ -86,7 +86,7 @@ export const Movies = [
 
     {
         name: 'Star Girl',
-        desc: 'Lorem ipsum blah blah blah',
+        desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
         titleImage: '77.jpg', 
         image: '7.jpg',
         category: 'Fantasy',
@@ -100,7 +100,7 @@ export const Movies = [
 
     {
         name: 'How to train a Dragon',
-        desc: 'Lorem ipsum blah blah blah',
+        desc: ' make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially',
         titleImage: '88.jpg', 
         image: '8.jpg',
         category: 'Horror',
