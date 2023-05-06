@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { Movies } from './../Data/MovieData';
 import Layout from '../Layout/Layout';
 import MovieInfo from '../Components/MovieInfo';
+import MovieCast from '../Components/MovieCast';
 
 
 function SingleMovie() {
@@ -14,6 +15,9 @@ function SingleMovie() {
   return (
     <Layout>
       <MovieInfo movie={movie}/>
+      <div className="container mx-auto px-2my-6 2xl:px-32">
+       <MovieCast/> 
+        </div>
    </Layout>
   );
 }
