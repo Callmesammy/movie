@@ -50,7 +50,8 @@ const Ratings = [
           Your email address will not be published. Required fields are marked
           Lorem ipasum dolor sit amet, consectetur adipiscing elit, sed do
           Your email address will not be published. Required fields are marked
-          Lorem ipasum dolor sit amet, consectetur adipiscing elit, sed do  Your email address will not be published. Required fields are marked
+          Lorem ipasum dolor sit amet, consectetur adipiscing elit, sed do 
+            Your email address will not be published. Required fields are marked
           Lorem ipasum dolor sit amet, consectetur adipiscing elit, sed do
            *</p>
           <div className="text-sm w-full">

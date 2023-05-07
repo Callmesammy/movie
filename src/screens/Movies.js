@@ -25,7 +25,7 @@ function MoviePage() {
     </p>
     <div className="grid sm:mt-10 mt-5 xl:grid-cols-4 2xl:grid-cols-5 lg:grid-cols-3 sm:grid-cols-2 gap-6">
       {
-        Movies.slice(0, page).map((movie, index) => (
+        Movies.slice(0, page)?.map((movie, index) => (
         <Movie key={index} movie={movie}/>
         ))
       }

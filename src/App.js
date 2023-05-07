@@ -6,6 +6,7 @@ import NotFound from './screens/NotFound';
 import Contactus from './screens/Contactus';
 import Movies from './screens/Movies';
 import SingleMovie from './screens/SingleMovie';
+import Watchpage from './screens/Watchpage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/contact-us" element={<Contactus />} />
       <Route path="/movies" element={<Movies />} />
       <Route path="/shows/:id" element={<SingleMovie />} />
+      <Route path="/Watch/:id" element={<Watchpage />} />
       <Route path="*" element={<NotFound />} />
    </Routes>
   );

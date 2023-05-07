@@ -21,7 +21,7 @@ export const Movies = [
         titleImage: '22.jpg', 
         image: '2.jpg',
         fullName: ' James John',
-        category: 'Romance',
+        category: 'Western',
         language: 'English',
         year: '2022',
         time: '1:30hr', 
