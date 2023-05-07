@@ -6,6 +6,7 @@ import { Movies } from './../Data/MovieData';
 import Layout from '../Layout/Layout';
 import MovieInfo from '../Components/MovieInfo';
 import MovieCast from '../Components/MovieCast';
+import MovieRates from './../Components/MovieRates';
 
 
 function SingleMovie() {
@@ -17,6 +18,8 @@ function SingleMovie() {
       <MovieInfo movie={movie}/>
       <div className="container mx-auto px-2my-6 2xl:px-32">
        <MovieCast/> 
+       {/* ratings */}
+       <MovieRates movie={movie}/>
         </div>
    </Layout>
   );
