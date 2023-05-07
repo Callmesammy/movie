@@ -32,7 +32,7 @@ function Rating ({value}) {
     </span>
      <span>
         {
-            value >= 2 ? (
+            value >= 3 ? (
                 <FaStar/>
             ) : value >= 3.5 ? 
             (<FaStarHalfAlt/>
@@ -62,7 +62,7 @@ function Rating ({value}) {
     </span>
 
     </>
-    )
-}
+    );
+};
 
 export default Rating
