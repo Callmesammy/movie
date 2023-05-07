@@ -1,9 +1,12 @@
 import React from 'react'
 import Title from './Title';
 import { BsBookmarkStarFill } from 'react-icons/bs';
+import { Select } from './UsedInputes';
+import { useState } from 'react';
 
 
 function MovieRates({movie}) {
+  const [rating, setRating] = useState();
 const Ratatings = [
     {
       title: "0 - Poor",
@@ -11,11 +14,11 @@ const Ratatings = [
     },
 
     {
-      title: "1 - faire",
+      title: "1 - Fair",
       value:1,
     },
     {
-      title: "2 - average",
+      title: "2 - Average",
       value:2,
     },
     {
@@ -50,7 +53,7 @@ const Ratatings = [
           Lorem ipasum dolor sit amet, consectetur adipiscing elit, sed do
            *</p>
           <div className="text-sm w-full">
-            
+          <Select label="Select Rating" options={Ratatings} onChange={(e) => setRating(e.target.value)}/>
           </div>
     </div>
     </div>
